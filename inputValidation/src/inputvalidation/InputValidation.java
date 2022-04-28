@@ -30,19 +30,13 @@ public class InputValidation {
             System.out.print("Please enter the maximum value: ");
             maximumInteger = computerKeyboardInput.nextInt();
         }
-        while (maximumInteger > minimumInteger) {
+       System.out.print("Please enter a value between " + minimumInteger + " and " + maximumInteger + ": ");
+        middleNumber = computerKeyboardInput.nextInt();
+        while (middleNumber > maximumInteger || middleNumber < minimumInteger) {
             System.out.print("Please enter a value between " + minimumInteger + " and " + maximumInteger + ": ");
             middleNumber = computerKeyboardInput.nextInt();
-            while (middleNumber > maximumInteger || middleNumber < minimumInteger) {
-                System.out.print("Please enter a value between " + minimumInteger + " and " + maximumInteger + ": ");
-                middleNumber = computerKeyboardInput.nextInt();
-            }
-            while (middleNumber < maximumInteger && middleNumber > minimumInteger) {
-                System.out.println("Thank you for your input");
-                break;
-            }
-            break;
         }
+        
         System.out.println("Minimum: " + minimumInteger);
         System.out.println("Middle: " + middleNumber);
         System.out.println("Maximim: " + maximumInteger);
